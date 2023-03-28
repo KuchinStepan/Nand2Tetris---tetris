@@ -1,0 +1,9 @@
+class Main {
+    function void name () {
+        var a = new BasedSqure(1,2);
+        var xxx = a.getX();
+        var yyy = a.getY();
+        printInt(xxx);
+        printInt(yyy);
+    } 
+}
