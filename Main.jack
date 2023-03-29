@@ -1,0 +1,8 @@
+class Main {
+    function void main () {
+        var BasedSquare a;
+        let a = BasedSquare.new(16);
+        do Output.printInt(a.getX());
+        return;
+    }
+}

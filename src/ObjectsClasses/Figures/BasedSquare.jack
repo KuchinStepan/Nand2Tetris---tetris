@@ -1,0 +1,10 @@
+class BasedSquare{
+    field int x;
+    constructor BasedSquare new(int xx){
+        let x = xx;
+        return this;
+    }
+    method int getX(){
+        return x;
+    }
+}
