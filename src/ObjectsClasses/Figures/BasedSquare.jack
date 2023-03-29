@@ -1,10 +1,16 @@
 class BasedSquare{
-    field int x;
-    constructor BasedSquare new(int xx){
-        let x = xx;
+    field Point LeftUpperCorner;
+    constructor BasedSquare new(Point leftUpperCorner){
+        let LeftUpperCorner = leftUpperCorner;
         return this;
     }
-    method int getX(){
-        return x;
+    method int getSquareX(){
+        return LeftUpperCorner.getX();
+    }
+    method int getSquareY(){
+        return LeftUpperCorner.getY();
+    }
+    method Point getPoint(){
+        return LeftUpperCorner;
     }
 }
