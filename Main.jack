@@ -1,10 +1,25 @@
 class Main {
     function void main () {
-        var BasedSquare a;
-        var Point point;
-        let point = Point.new(16, 15);
-        let a = BasedSquare.new(point);
-        do Output.printInt(a.getSquareX());
+        //var PrintBentLineUnder figure;
+        //do figure.print(10, 10);
+
+        //var PrintZFigureRight PZ;
+        //do PZ.print(10, 10);
+        
+        //var PrintBigSquare BS;
+        //do BS.print(10, 10);
+
+        //var PrintLine figure;
+        //do figure.print(10, 10);
+        
+        //var PrintLineWithSquare figure;
+        //do figure.print(10, 10);
+
+        //var PrintBentLineUpper figure;
+        //do figure.print(10, 10);
+
+        //var PrintZFigureLeft figure;
+        //do figure.print(20, 20);
         return;
     }
 }

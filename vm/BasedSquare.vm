@@ -1,9 +1,11 @@
 function BasedSquare.new 0
-push constant 1
+push constant 2
 call Memory.alloc 1
 pop pointer 0
 push argument 0
 pop this 0
+push constant 10
+pop this 1
 push pointer 0
 return
 function BasedSquare.getSquareX 0
@@ -22,4 +24,23 @@ function BasedSquare.getPoint 0
 push argument 0
 pop pointer 0
 push this 0
+return
+function BasedSquare.printSquare 0
+push argument 0
+pop pointer 0
+push this 0
+call Point.getX 1
+push this 0
+call Point.getY 1
+push this 0
+call Point.getX 1
+push this 1
+add
+push this 0
+call Point.getY 1
+push this 1
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
 return

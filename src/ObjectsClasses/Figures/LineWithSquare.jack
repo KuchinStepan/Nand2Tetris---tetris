@@ -1,0 +1,32 @@
+class LineWithSquare{
+    field BasedSquare Square1;
+    field BasedSquare Square2;
+    field BasedSquare Square3;
+    field BasedSquare Square4;
+    constructor LineWithSquare new(BasedSquare square1,BasedSquare square2,BasedSquare square3,BasedSquare square4){
+        let Square1 = square1;
+        let Square2 = square2;
+        let Square3 = square3;
+        let Square4 = square4;
+        return this;
+    }
+    method LineWithSquare getSquare1(){
+        return Square1;
+    }
+    method LineWithSquare getSquare2(){
+        return Square2;
+    }
+    method LineWithSquare getSquare3(){
+        return Square3;
+    }
+    method LineWithSquare getSquare4(){
+        return Square4;
+    }
+    method void printLineWithSquare(){
+        do Square1.printSquare();
+        do Square2.printSquare();
+        do Square3.printSquare();
+        do Square4.printSquare();
+        return;
+    }
+}

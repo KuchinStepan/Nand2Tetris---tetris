@@ -1,7 +1,9 @@
 class BasedSquare{
     field Point LeftUpperCorner;
+    field int Size;
     constructor BasedSquare new(Point leftUpperCorner){
         let LeftUpperCorner = leftUpperCorner;
+        let Size = 10;
         return this;
     }
     method int getSquareX(){
@@ -12,5 +14,9 @@ class BasedSquare{
     }
     method Point getPoint(){
         return LeftUpperCorner;
+    }
+    method void printSquare(){
+        do Screen.drawRectangle(LeftUpperCorner.getX(), LeftUpperCorner.getY(), LeftUpperCorner.getX()+Size, LeftUpperCorner.getY()+Size);
+        return;
     }
 }
