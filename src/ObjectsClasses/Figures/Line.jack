@@ -21,18 +21,21 @@ class Line{
         let Square2 = square2;
         let Square3 = square3;
         let Square4 = square4;
+        let position = pos;
+        do printLine();
+        do fall();
         return this;
     }
-    method Line getSquare1(){
+    method BasedSquare getSquare1(){
         return Square1;
     }
-    method Line getSquare2(){
+    method BasedSquare getSquare2(){
         return Square2;
     }
-    method Line getSquare3(){
+    method BasedSquare getSquare3(){
         return Square3;
     }
-    method Line getSquare4(){
+    method BasedSquare getSquare4(){
         return Square4;
     }
     method void TurnLine(){

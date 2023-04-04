@@ -1,27 +1,23 @@
 class Main {
-    function void main () {
-        //var PrintBentLineUnder figure;
-        //do figure.print(10, 10);
-
-        //var PrintZFigureRight PZ;
-        //do PZ.print(10, 10);
+    function void main (){
+        /*
+        var Line line;
+        var LineWithSquare lineWithSquare;
+        var ZFigureRight zFigureRight;
+        var ZFigureLeft zFigureLeft;
+        var BigSquare bigSquare;
+        var BentLineUnder bentLineUnder;
+        var BentLineUpper bentLineUpper;
+        do Screen.drawLine(0, 240, 240, 240);
+        let line = Line.new(32, 32);
+        let lineWithSquare = LineWithSquare.new(16, 16);
+        let zFigureRight = ZFigureLeft.new(16, 16);
+        let zFigureLeft = ZFigureLeft.new(16, 16);
+        let bigSquare = BasedSquare.new(16, 16);
+        let bentLineUnder = BentLineUnder.new(16, 16);
+        let bentLineUpper = BentLineUpper.new(16,16);
+        */
         
-<<<<<<< HEAD
-        //var PrintBigSquare BS;
-        //do BS.print(10, 10);
-
-        //var PrintLine figure;
-        //do figure.print(10, 10);
-        
-        //var PrintLineWithSquare figure;
-        //do figure.print(10, 10);
-
-        //var PrintBentLineUpper figure;
-        //do figure.print(10, 10);
-
-        //var PrintZFigureLeft figure;
-        //do figure.print(20, 20);
-=======
         var Line line;
         var BentLineUnder l;
         do Screen.drawRectangle(79, 0, 99, 250);
@@ -42,7 +38,6 @@ class Main {
         let l = BentLineUnder.new(180, 32);
         let l = BentLineUnder.new(180, 32);
         let l = BentLineUnder.new(180, 32);
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
         return;
     }
 }

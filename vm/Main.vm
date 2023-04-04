@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-function Main.main 1
-push local 0
-push constant 20
-push constant 20
-call PrintZFigureLeft.print 3
-pop temp 0
-=======
 function Main.main 2
 push constant 79
 push constant 0
@@ -49,6 +41,5 @@ push constant 180
 push constant 32
 call BentLineUnder.new 2
 pop local 1
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 push constant 0
 return

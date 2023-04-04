@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-function BentLineUpper.new 0
-push constant 4
-call Memory.alloc 1
-pop pointer 0
-push argument 0
-pop this 0
-push argument 1
-pop this 1
-push argument 2
-pop this 2
-push argument 3
-pop this 3
-=======
 function BentLineUpper.new 5
 push constant 6
 call Memory.alloc 1
@@ -58,42 +44,26 @@ pop temp 0
 push pointer 0
 call BentLineUpper.fall 1
 pop temp 0
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 push pointer 0
 return
 function BentLineUpper.getSquare1 0
 push argument 0
 pop pointer 0
-<<<<<<< HEAD
-push this 0
-=======
 push this 2
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 return
 function BentLineUpper.getSquare2 0
 push argument 0
 pop pointer 0
-<<<<<<< HEAD
-push this 1
-=======
 push this 3
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 return
 function BentLineUpper.getSquare3 0
 push argument 0
 pop pointer 0
-<<<<<<< HEAD
-push this 2
-=======
 push this 4
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 return
 function BentLineUpper.getSquare4 0
 push argument 0
 pop pointer 0
-<<<<<<< HEAD
-push this 3
-=======
 push this 5
 return
 function BentLineUpper.TurnRightBentLineUpper 0
@@ -1425,28 +1395,16 @@ add
 call BasedSquare.setSquare 3
 pop temp 0
 push constant 0
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 return
 function BentLineUpper.printBentLineUpper 0
 push argument 0
 pop pointer 0
-<<<<<<< HEAD
-push this 0
-call BasedSquare.printSquare 1
-pop temp 0
-push this 1
-call BasedSquare.printSquare 1
-pop temp 0
-=======
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 push this 2
 call BasedSquare.printSquare 1
 pop temp 0
 push this 3
 call BasedSquare.printSquare 1
 pop temp 0
-<<<<<<< HEAD
-=======
 push this 4
 call BasedSquare.printSquare 1
 pop temp 0
@@ -1737,6 +1695,5 @@ push constant 0
 not
 return
 label IF_FALSE0
->>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 push constant 0
 return

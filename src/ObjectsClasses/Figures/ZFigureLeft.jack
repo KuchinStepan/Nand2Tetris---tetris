@@ -21,18 +21,21 @@ class ZFigureLeft{
         let Square2 = square2;
         let Square3 = square3;
         let Square4 = square4;
+        let position = pos;
+        do printZFigureLeft();
+        do fall();
         return this;
     }
-    method ZFigureLeft getSquare1(){
+    method BasedSquare getSquare1(){
         return Square1;
     }
-    method ZFigureLeft getSquare2(){
+    method BasedSquare getSquare2(){
         return Square2;
     }
-    method ZFigureLeft getSquare3(){
+    method BasedSquare getSquare3(){
         return Square3;
     }
-    method ZFigureLeft getSquare4(){
+    method BasedSquare getSquare4(){
         return Square4;
     }
     method void TurnZFigureLeft(){
