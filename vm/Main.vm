@@ -1,8 +1,54 @@
+<<<<<<< HEAD
 function Main.main 1
 push local 0
 push constant 20
 push constant 20
 call PrintZFigureLeft.print 3
 pop temp 0
+=======
+function Main.main 2
+push constant 79
+push constant 0
+push constant 99
+push constant 250
+call Screen.drawRectangle 4
+pop temp 0
+push constant 260
+push constant 0
+push constant 280
+push constant 250
+call Screen.drawRectangle 4
+pop temp 0
+push constant 100
+push constant 224
+push constant 260
+push constant 250
+call Screen.drawRectangle 4
+pop temp 0
+push constant 180
+push constant 32
+call Line.new 2
+pop local 0
+push constant 180
+push constant 32
+call Line.new 2
+pop local 0
+push constant 180
+push constant 32
+call Line.new 2
+pop local 0
+push constant 180
+push constant 32
+call BentLineUnder.new 2
+pop local 1
+push constant 180
+push constant 32
+call BentLineUnder.new 2
+pop local 1
+push constant 180
+push constant 32
+call BentLineUnder.new 2
+pop local 1
+>>>>>>> 3c0bc4a (Realize all default game figures without any bugs)
 push constant 0
 return

@@ -1,11 +1,11 @@
-class Line{
+class LineWithSquare{
     field bool Move;
     field Position position;
     field BasedSquare Square1;
     field BasedSquare Square2;
     field BasedSquare Square3;
     field BasedSquare Square4;
-    constructor Line new(int x, int y){
+    constructor LineWithSquare new(int x, int y){
         var Position pos;
         var BasedSquare square1;
         var BasedSquare square2;
@@ -16,85 +16,145 @@ class Line{
         let square1 = BasedSquare.new(x, y);
         let square2 = BasedSquare.new(x + 16, y);
         let square3 = BasedSquare.new(x + 32, y);
-        let square4 = BasedSquare.new(x + 48, y);
+        let square4 = BasedSquare.new(x + 16, y - 16);
         let Square1 = square1;
         let Square2 = square2;
         let Square3 = square3;
         let Square4 = square4;
+        let position = pos;
+        do printLineWithSquare();
+        do fall();
         return this;
     }
-    method Line getSquare1(){
+    method BasedSquare getSquare1(){
         return Square1;
     }
-    method Line getSquare2(){
+    method BasedSquare getSquare2(){
         return Square2;
     }
-    method Line getSquare3(){
+    method BasedSquare getSquare3(){
         return Square3;
     }
-    method Line getSquare4(){
+    method BasedSquare getSquare4(){
         return Square4;
     }
-    method void TurnLine(){
+    method void TurnRightLineWithSquare(){
         if (position.GetPosition() = 1){
             do Clear();
             do Screen.setColor(true);
-            do Square1.setSquare(Square1.getSquareX()+16, Square1.getSquareY()-16);
+            do Square1.setSquare(Square1.getSquareX() + 16, Square1.getSquareY() + 16);
             do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-            do Square3.setSquare(Square3.getSquareX()-16, Square3.getSquareY()+16);
-            do Square4.setSquare(Square4.getSquareX()-32, Square4.getSquareY()+32);
-            if (CanDrawFigure() = false){
-                do Square1.setSquare(Square1.getSquareX()-16, Square1.getSquareY()+16);
+            do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY());
+            do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY());
+            if(CanDrawFigure() = false){
+                do Square1.setSquare(Square1.getSquareX() - 16, Square1.getSquareY() - 16);
                 do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-                do Square3.setSquare(Square3.getSquareX()+16, Square3.getSquareY()-16);
-                do Square4.setSquare(Square4.getSquareX()+32, Square4.getSquareY()-32);
+                do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY());
+                do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY());
             }
-
         }
         if (position.GetPosition() = 2){
             do Clear();
             do Screen.setColor(true);
-            do Square1.setSquare(Square1.getSquareX()-16, Square1.getSquareY()+16);
+            do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
             do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-            do Square3.setSquare(Square3.getSquareX()+16, Square3.getSquareY()-16);
-            do Square4.setSquare(Square4.getSquareX()+32, Square4.getSquareY()-32);
+            do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY());
+            do Square4.setSquare(Square4.getSquareX() - 16, Square4.getSquareY() + 16);
             if (CanDrawFigure() = false){
-                do Square1.setSquare(Square1.getSquareX()+16, Square1.getSquareY()-16);
+                do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
                 do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-                do Square3.setSquare(Square3.getSquareX()-16, Square3.getSquareY()+16);
-                do Square4.setSquare(Square4.getSquareX()-32, Square4.getSquareY()+32);
+                do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY());
+                do Square4.setSquare(Square4.getSquareX() + 16, Square4.getSquareY() - 16);
             }
-
         }
         if (position.GetPosition() = 3){
             do Clear();
             do Screen.setColor(true);
-            do Square1.setSquare(Square1.getSquareX()+16, Square1.getSquareY()-16);
+            do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
             do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-            do Square3.setSquare(Square3.getSquareX()-16, Square3.getSquareY()+16);
-            do Square4.setSquare(Square4.getSquareX()-32, Square4.getSquareY()+32);
+            do Square3.setSquare(Square3.getSquareX() - 16, Square3.getSquareY() - 16);
+            do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY());
             if (CanDrawFigure() = false){
-                do Square1.setSquare(Square1.getSquareX()-16, Square1.getSquareY()+16);
+                do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
                 do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-                do Square3.setSquare(Square3.getSquareX()+16, Square3.getSquareY()-16);
-                do Square4.setSquare(Square4.getSquareX()+32, Square4.getSquareY()-32);
+                do Square3.setSquare(Square3.getSquareX() + 16, Square3.getSquareY() - 16);
+                do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY());
             }
         }
         if (position.GetPosition() = 0){
             do Clear();
             do Screen.setColor(true);
-            do Square1.setSquare(Square1.getSquareX()-16, Square1.getSquareY()+16);
-            do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-            do Square3.setSquare(Square3.getSquareX()+16, Square3.getSquareY()-16);
-            do Square4.setSquare(Square4.getSquareX()+32, Square4.getSquareY()-32);
+            do Square1.setSquare(Square1.getSquareX() - 16, Square1.getSquareY());
+            do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY() + 16);
+            do Square3.setSquare(Square3.getSquareX() + 16, Square3.getSquareY() + 32);
+            do Square4.setSquare(Square4.getSquareX() + 16, Square4.getSquareY());
             if (CanDrawFigure() = false){
-                do Square1.setSquare(Square1.getSquareX()+16, Square1.getSquareY()-16);
-                do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
-                do Square3.setSquare(Square3.getSquareX()-16, Square3.getSquareY()+16);
-                do Square4.setSquare(Square4.getSquareX()-32, Square4.getSquareY()+32);
+                do Square1.setSquare(Square1.getSquareX() + 16, Square1.getSquareY());
+                do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY() - 16);
+                do Square3.setSquare(Square3.getSquareX() - 16, Square3.getSquareY() - 32);
+                do Square4.setSquare(Square4.getSquareX() - 16, Square4.getSquareY());
             }
         }
-        do printLine();
+        do printLineWithSquare();
+        return;
+    }
+    method void TurnLeftLineWithSquare(){
+        if (position.GetPosition() = 1){
+            do Clear();
+            do Screen.setColor(true);
+            do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
+            do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
+            do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY());
+            do Square4.setSquare(Square4.getSquareX() + 16, Square4.getSquareY() - 16);
+            if (CanDrawFigure() = false){
+                do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
+                do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
+                do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY());
+                do Square4.setSquare(Square4.getSquareX() - 16, Square4.getSquareY() + 16);
+            }
+        }
+        if (position.GetPosition() = 2){
+            do Clear();
+            do Screen.setColor(true);
+            do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
+            do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
+            do Square3.setSquare(Square3.getSquareX() + 16, Square3.getSquareY() + 16);
+            do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY());
+            if (CanDrawFigure() = false){
+                do Square1.setSquare(Square1.getSquareX(), Square1.getSquareY());
+                do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY());
+                do Square3.setSquare(Square3.getSquareX() - 16, Square3.getSquareY() - 16);
+                do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY());
+            }
+        }
+        if (position.GetPosition() = 3){
+            do Clear();
+            do Screen.setColor(true);
+            do Square1.setSquare(Square1.getSquareX() + 16, Square1.getSquareY());
+            do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY() - 16);
+            do Square3.setSquare(Square3.getSquareX() - 16, Square3.getSquareY() - 32);
+            do Square4.setSquare(Square4.getSquareX() - 16, Square4.getSquareY());
+            if (CanDrawFigure() = false){
+                do Square1.setSquare(Square1.getSquareX() - 16, Square1.getSquareY());
+                do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY() + 16);
+                do Square3.setSquare(Square3.getSquareX() + 16, Square3.getSquareY() + 32);
+                do Square4.setSquare(Square4.getSquareX() + 16, Square4.getSquareY());
+            }
+        }
+        if (position.GetPosition() = 0){
+            do Clear();
+            do Screen.setColor(true);
+            do Square1.setSquare(Square1.getSquareX() - 16, Square1.getSquareY());
+            do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY() + 16);
+            do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY() + 16);
+            do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY() + 16);
+            if (CanDrawFigure() = false){
+                do Square1.setSquare(Square1.getSquareX() + 16, Square1.getSquareY());
+                do Square2.setSquare(Square2.getSquareX(), Square2.getSquareY() - 16);
+                do Square3.setSquare(Square3.getSquareX(), Square3.getSquareY() - 16);
+                do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY() - 16);
+            }
+        }
         return;
     }
     method void fall(){
@@ -112,13 +172,13 @@ class Line{
             let key = Keyboard.keyPressed();
             if (key = 131){
                 do position.TurnRight();
-                do TurnLine();
+                do TurnRightLineWithSquare();
                 do count.setZero();
                 do Sys.wait(speed.getSpeed());
             }
             if (key = 133){
                 do position.TurnLeft();
-                do TurnLine();
+                do TurnLeftLineWithSquare();
                 do count.setZero();
                 do Sys.wait(speed.getSpeed());
             }
@@ -138,49 +198,53 @@ class Line{
                 let address1 = 16384 + ((Square1.getSquareY() + 16) * 32) + (Square1.getSquareX() / 16);
                 let address2 = 16384 + ((Square2.getSquareY() + 16) * 32) + (Square2.getSquareX() / 16);
                 let address3 = 16384 + ((Square3.getSquareY() + 16) * 32) + (Square3.getSquareX() / 16);
-                let address4 = 16384 + ((Square4.getSquareY() + 16) * 32) + (Square4.getSquareX() / 16);
-                if (((Memory.peek(address1) > 0) | (Memory.peek(address1) = 0)) & ((Memory.peek(address2) > 0) | (Memory.peek(address2) = 0)) & ((Memory.peek(address3) > 0) | (Memory.peek(address3) = 0)) & ((Memory.peek(address4) > 0) | (Memory.peek(address4) = 0)))
+                do Sys.wait(speed.getSpeed());
+                if (((Memory.peek(address1) > 0) | (Memory.peek(address1) = 0)) & ((Memory.peek(address2) > 0) | (Memory.peek(address2) = 0)) & ((Memory.peek(address3) > 0) | (Memory.peek(address3) = 0)))
                 { 
                     do Clear();
                     do fallToPixels();
                     do Screen.setColor(true);
-                    do printLine();
+                    do printLineWithSquare();
                     do fall();
                 }
             }
             if (position.GetPosition() = 1){
-                let address4 = 16384 + ((Square4.getSquareY() + 16) * 32) + (Square4.getSquareX() / 16);
-                if ((Memory.peek(address4) > 0) | (Memory.peek(address4) = 0))
+                let address3 = 16384 + ((Square3.getSquareY() + 16) * 32) + (Square3.getSquareX() / 16);
+                let address1 = 16384 + ((Square1.getSquareY() + 16) * 32) + (Square1.getSquareX() / 16);
+                do Sys.wait(speed.getSpeed());
+                if (((Memory.peek(address1) > 0) | (Memory.peek(address1) = 0)) & ((Memory.peek(address3) > 0) | (Memory.peek(address3) = 0)))
                 {  
                     do Clear();
                     do fallToPixels();
                     do Screen.setColor(true);
-                    do printLine();
+                    do printLineWithSquare();
                     do fall();
                 }
             }
             if (position.GetPosition() = 2){
                 let address1 = 16384 + ((Square1.getSquareY() + 16) * 32) + (Square1.getSquareX() / 16);
-                let address2 = 16384 + ((Square2.getSquareY() + 16) * 32) + (Square2.getSquareX() / 16);
                 let address3 = 16384 + ((Square3.getSquareY() + 16) * 32) + (Square3.getSquareX() / 16);
                 let address4 = 16384 + ((Square4.getSquareY() + 16) * 32) + (Square4.getSquareX() / 16);
-                if (((Memory.peek(address1) > 0) | (Memory.peek(address1) = 0)) & ((Memory.peek(address2) > 0) | (Memory.peek(address2) = 0)) & ((Memory.peek(address3) > 0) | (Memory.peek(address3) = 0)) & ((Memory.peek(address4) > 0) | (Memory.peek(address4) = 0)))
+                do Sys.wait(speed.getSpeed());
+                if (((Memory.peek(address1) > 0) | (Memory.peek(address1) = 0)) & ((Memory.peek(address3) > 0) | (Memory.peek(address3) = 0)) & ((Memory.peek(address4) > 0) | (Memory.peek(address4) = 0)))
                 { 
                     do Clear();
                     do fallToPixels();
                     do Screen.setColor(true);
-                    do printLine();
+                    do printLineWithSquare();
                     do fall();
                 }
             }
             if (position.GetPosition() = 3){
                 let address4 = 16384 + ((Square4.getSquareY() + 16) * 32) + (Square4.getSquareX() / 16);
-                if ((Memory.peek(address4) > 0) | (Memory.peek(address4) = 0))
+                let address1 = 16384 + ((Square1.getSquareY() + 16) * 32) + (Square1.getSquareX() / 16);
+                do Sys.wait(speed.getSpeed());
+                if (((Memory.peek(address1) > 0) | (Memory.peek(address1) = 0)) & ((Memory.peek(address4) > 0) | (Memory.peek(address4) = 0)))
                 {  
                     do Clear();
                     do fallToPixels();
                     do Screen.setColor(true);
-                    do printLine();
+                    do printLineWithSquare();
                     do fall();
                 }
             }
@@ -199,7 +263,7 @@ class Line{
         do Square4.setSquare(Square4.getSquareX(), Square4.getSquareY() + countPixelsMove.getCountPixelsMove());
         return;
     }
-    method void printLine(){
+    method void printLineWithSquare(){
         do Square1.printSquare();
         do Square2.printSquare();
         do Square3.printSquare();
@@ -221,7 +285,7 @@ class Line{
             do Square4.setSquare(Square4.getSquareX() - 16, Square4.getSquareY() - 16);
             let Move = false;
         }
-        do printLine();
+        do printLineWithSquare();
         return;
     }
     method void MoveLeft(){
@@ -239,7 +303,7 @@ class Line{
             do Square4.setSquare(Square4.getSquareX() + 16, Square4.getSquareY() - 16);
             let Move = false;
         }
-        do printLine();
+        do printLineWithSquare();
         return;
     }
     method void Clear(){

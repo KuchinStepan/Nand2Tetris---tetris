@@ -5,7 +5,16 @@ class BentLineUpper{
     field BasedSquare Square2;
     field BasedSquare Square3;
     field BasedSquare Square4;
-    constructor BentLineUpper new(BasedSquare square1,BasedSquare square2,BasedSquare square3,BasedSquare square4){
+    constructor BentLineUpper new(int x, int y){
+        var Position pos;
+        var BasedSquare square1;
+        var BasedSquare square2;
+        var BasedSquare square3;
+        var BasedSquare square4;
+        let square1 = BasedSquare.new(x, y);
+        let square2 = BasedSquare.new(x + 16, y);
+        let square3 = BasedSquare.new(x, y + 16);
+        let square4 = BasedSquare.new(x, y + 32);
         let Square1 = square1;
         let Square2 = square2;
         let Square3 = square3;
