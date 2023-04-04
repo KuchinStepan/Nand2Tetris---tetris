@@ -1,3 +1,29 @@
 class GameField {
-    
+    field ListArray Field;
+    field int CountStrings;
+    constructor GameField new(int countStrings){ 
+        let CountStrings = countStrings;
+        var bool start;
+        let start = true;
+        while(CountStrings > 0){
+            var Array array;
+            var int count;
+            let count = 16;
+            let array = Array.new(16);
+            while (count > 0){
+                let array[count] = 0;
+                let count = count - 1;
+            }
+            if (start = true){
+                let Field = ListArray.new(array, null);
+            }
+            else{
+                let Field =  ListArray.new(array,Field);
+            }
+            let start = false;
+        }
+    }
 }
+//ну я вроде конструктор написал, но я вообще не уверен, что это так работает )))
+//я запушу ты протести это
+//посмотри ListArray там есть методы для работы, с помощью их затести
