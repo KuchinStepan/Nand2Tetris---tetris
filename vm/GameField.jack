@@ -1,3 +1,407 @@
 class GameField {
-    
+    field Array Array1;
+    field Array Array2;
+    field Array Array3;
+    field Array Array4;
+    field Array Array5;
+    field Array Array6;
+    field Array Array7;
+    field Array Array8;
+    field Array Array9;
+    field Array Array10;
+    field Array Array11;
+    field Array Array12;
+    constructor GameField new(){
+        var int i;
+        let Array1 = Array.new(10);
+        let Array2 = Array.new(10);
+        let Array3 = Array.new(10);
+        let Array4 = Array.new(10);
+        let Array5 = Array.new(10);
+        let Array6 = Array.new(10);
+        let Array7 = Array.new(10);
+        let Array8 = Array.new(10);
+        let Array9 = Array.new(10);
+        let Array10 = Array.new(10);
+        let Array11 = Array.new(10);
+        let Array12 = Array.new(10);
+        let i = 10;
+        while (i > 0) {
+            let Array1[i - 1] = 0;
+            let Array2[i - 1] = 0;
+            let Array3[i - 1] = 0;
+            let Array4[i - 1] = 0;
+            let Array5[i - 1] = 0;
+            let Array6[i - 1] = 0;
+            let Array7[i - 1] = 0;
+            let Array8[i - 1] = 0;
+            let Array9[i - 1] = 0;
+            let Array10[i - 1] = 0;
+            let Array11[i - 1] = 0;
+            let Array12[i - 1] = 0;
+            let i = i - 1;
+        }
+        return this;
+    }
+    method void Update(){
+        var int x;
+        var int y;
+        var int i;
+        var int j;
+        let x = 108;
+        let y = 40;
+        let i = 12;
+        let j = 10;
+        while(i > 0){
+            while(j > 0){
+                if (i = 1){
+                    let Array1[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 2){
+                    let Array2[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 3){
+                    let Array3[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 4){
+                    let Array4[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 5){
+                    let Array5[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 6){
+                    let Array6[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 7){
+                    let Array7[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 8){
+                    let Array8[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 9){
+                    let Array9[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 10){
+                    let Array10[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 11){
+                    let Array11[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                if (i = 12){
+                    let Array12[10 - j] = Memory.peek(16384 + ((y + (16 * (12 - i))) * 32) + (x + (16 * (10 - j)) / 16));
+                }
+                let j = j - 1;
+            }
+            let j = 10;
+            let i = i - 1;
+        }
+        return;
+    }
+    method void DoZero(Array array){
+        var int i;
+        let i = 10;
+        let array = Array.new(10);
+        while (i > 0){
+            let array[i - 1] = 0;
+            let i = i - 1;
+        }
+        return;
+    }
+    method bool IsFull(Array array){
+        var int i;
+        var bool flag;
+        let flag = true;
+        let i = 10;
+        while(i > 0){
+            if (~((array[i - 1] = 0) | (array[i - 1] > 0))){
+                let i = i - 1;
+            }
+            else{
+                let flag = false;
+                let i = 0;
+            }
+        }
+        return flag;
+    }
+    method void Shift(){
+        var bool flag;
+        let flag = IsFull(Array12);
+        if (flag = true){
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array11);
+        if (flag = true){
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array10);
+        if (flag = true){
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array9);
+        if (flag = true){
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array8);
+        if (flag = true){
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array7);
+        if (flag = true){
+            let Array7 = Array8;
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array6);
+        if (flag = true){
+            let Array6 = Array7;
+            let Array7 = Array8;
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array5);
+        if (flag = true){
+            let Array5 = Array6;
+            let Array6 = Array7;
+            let Array7 = Array8;
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+
+        let flag = IsFull(Array4);
+        if (flag = true){
+            let Array4 = Array5;
+            let Array5 = Array6;
+            let Array6 = Array7;
+            let Array7 = Array8;
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array3);
+        if (flag = true){
+            let Array3 = Array4;
+            let Array4 = Array5;
+            let Array5 = Array6;
+            let Array6 = Array7;
+            let Array7 = Array8;
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array2);
+        if (flag = true){
+            let Array2 = Array3;
+            let Array3 = Array4;
+            let Array4 = Array5;
+            let Array5 = Array6;
+            let Array6 = Array7;
+            let Array7 = Array8;
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+
+        let flag = IsFull(Array1);
+        if (flag = true){
+            let Array1 = Array2;
+            let Array2 = Array3;
+            let Array3 = Array4;
+            let Array4 = Array5;
+            let Array5 = Array6;
+            let Array6 = Array7;
+            let Array7 = Array8;
+            let Array8 = Array9;
+            let Array9 = Array10;
+            let Array10 = Array11;
+            let Array11 = Array12;
+            do DoZero(Array12);
+        }
+        return;
+    }
+    method void PrintField(){
+        var int x;
+        var int y;
+        var int i;
+        var int j;
+        var BasedSquare BS;
+        let i = 12;
+        let j = 10;
+        let x = 100;
+        let y = 32;
+        while(i > 0){
+            while(j > 0){
+                if (i = 1){
+                    if ((Array1[10 - j] > 0) | (Array1[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 2){
+                    if ((Array2[10 - j] > 0) | (Array2[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 3){
+                    if ((Array3[10 - j] > 0) | (Array3[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 4){
+                    if ((Array4[10 - j] > 0) | (Array4[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 5){
+                    if ((Array5[10 - j] > 0) | (Array5[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 6){
+                    if ((Array6[10 - j] > 0) | (Array6[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 7){
+                    if ((Array7[10 - j] > 0) | (Array7[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 8){
+                    if ((Array8[10 - j] > 0) | (Array8[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 9){
+                    if ((Array9[10 - j] > 0) | (Array9[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 10){
+                    if ((Array10[10 - j] > 0) | (Array10[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 11){
+                    if ((Array11[10 - j] > 0) | (Array11[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                if (i = 12){
+                    if ((Array12[10 - j] > 0) | (Array12[10 - j] = 0)){
+                        do Screen.setColor(false);
+                        do Screen.drawRectangle(x + (16 * (10 - j)), (y + (16 * (12 - i))), x + (16 * (10 - j)) + 15, (y + (16 * (12 - i))) + 15);
+                    }
+                    else{
+                        do Screen.setColor(true);
+                        let BS = BasedSquare.new(x + (16 * (10 - j)), (y + (16 * (12 - i))));
+                        do BS.printSquare();
+                    }
+                }
+                let j = j - 1;
+            }
+            let j = 10;
+            let i = i - 1;
+        }
+        return;
+    }
 }
