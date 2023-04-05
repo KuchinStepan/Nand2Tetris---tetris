@@ -15,8 +15,10 @@ class Game{
                 if (~((array[j - 1] > 0) | (array[j - 1] = 0))){
                     do Screen.setColor(false);
                     do Screen.drawRectangle(100, 0, 259, 223);
-                    do Screen.setColor(true);
                     do Game();
+                    //do Screen.setColor(false);
+                    //do Screen.drawRectangle(0, 0, 400, 250);
+                    //do GameOver.new(50,50);
                 }
                 let j = j - 1;
             }

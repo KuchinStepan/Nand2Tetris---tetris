@@ -58,10 +58,6 @@ push constant 259
 push constant 223
 call Screen.drawRectangle 4
 pop temp 0
-push constant 0
-not
-call Screen.setColor 1
-pop temp 0
 push pointer 0
 call Game.Game 1
 pop temp 0
