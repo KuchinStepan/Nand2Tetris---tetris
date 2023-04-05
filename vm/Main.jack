@@ -1,50 +1,10 @@
 class Main {
+    
     function void main (){
-        /*
-        var Line line;
-        var LineWithSquare lineWithSquare;
-        var ZFigureRight zFigureRight;
-        var ZFigureLeft zFigureLeft;
-        var BigSquare bigSquare;
-        var BentLineUnder bentLineUnder;
-        var BentLineUpper bentLineUpper;
-        do Screen.drawLine(0, 240, 240, 240);
-        let line = Line.new(32, 32);
-        let lineWithSquare = LineWithSquare.new(16, 16);
-        let zFigureRight = ZFigureLeft.new(16, 16);
-        let zFigureLeft = ZFigureLeft.new(16, 16);
-        let bigSquare = BasedSquare.new(16, 16);
-        let bentLineUnder = BentLineUnder.new(16, 16);
-        let bentLineUpper = BentLineUpper.new(16,16);
-        */
-        
-        //var Line line;
-        //var BentLineUnder l;
-        var int i;
-        var GameField gameField;
-        var List ourField;
-        do Screen.drawRectangle(79, 0, 99, 250);
-        do Screen.drawRectangle(260, 0, 280, 250);
-        do Screen.drawRectangle(100, 224, 260, 250);
-        let gameField = GameField.new(12);
-        
-        
-        let i = 20;
-        while (i > 0) {
-            do RandomizeFigure.MakeFigure(180,32);
-            do gameField.Update();
-            do gameField.Shift();
-            do gameField.PrintField();
-            let i = i - 1;
-        }
-        
-        
-        //let line = Line.new(180, 32);
-        //let line = Line.new(180, 32);
-        //let line = Line.new(180, 32);
-        //let l = BentLineUnder.new(180, 32);
-        //let l = BentLineUnder.new(180, 32);
-        //let l = BentLineUnder.new(180, 32);
+        var Game game;
+        do Interfase.drawInterfase();
+        do game.Game();
         return;
     }
+    
 }

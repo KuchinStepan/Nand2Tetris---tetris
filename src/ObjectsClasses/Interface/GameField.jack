@@ -404,4 +404,7 @@ class GameField {
         }
         return;
     }
+    method Array getArray12(){
+        return Array12;
+    }
 }

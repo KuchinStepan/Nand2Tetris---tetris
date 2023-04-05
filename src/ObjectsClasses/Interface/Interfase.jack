@@ -1,0 +1,8 @@
+class Interfase{
+    function void drawInterfase(){
+        do Screen.drawRectangle(79, 0, 99, 250);
+        do Screen.drawRectangle(260, 0, 280, 250);
+        do Screen.drawRectangle(100, 224, 260, 250);
+        return;
+    }
+}

@@ -22,8 +22,12 @@ class BasedSquare{
         return;
     }
     method void printSquare(){
+        do Screen.setColor(true);
         do Screen.drawRectangle(LeftUpperCorner.getX(), LeftUpperCorner.getY(), LeftUpperCorner.getX()+Size, LeftUpperCorner.getY()+Size);
         do Screen.setColor(false);
+        ////do Screen.drawLine(LeftUpperCorner.getX() + 1, LeftUpperCorner.getY() + 1, LeftUpperCorner.getX() + 14, LeftUpperCorner.getY() + 1);
+        ////do Screen.drawLine(LeftUpperCorner.getX() + 1, LeftUpperCorner.getY() + 1, LeftUpperCorner.getX() + 1, LeftUpperCorner.getY() + 14);
+        ////do Screen.setColor(true);
         do Screen.drawRectangle(LeftUpperCorner.getX() + 1, LeftUpperCorner.getY() + 1, LeftUpperCorner.getX()+Size - 4, LeftUpperCorner.getY()+Size - 4);
         do Screen.setColor(true);
         do Screen.drawRectangle(LeftUpperCorner.getX() + 2, LeftUpperCorner.getY() + 2, LeftUpperCorner.getX()+Size - 4, LeftUpperCorner.getY()+Size - 4);

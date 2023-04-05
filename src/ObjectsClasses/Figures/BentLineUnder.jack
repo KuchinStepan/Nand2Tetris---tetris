@@ -195,6 +195,7 @@ class BentLineUnder{
                 do Sys.wait(speed.getSpeed());
             }
         }
+        do Sys.wait(speed.getSpeed());
         if (Move = false){
             if (position.GetPosition() = 0){
                 let address3 = 16384 + ((Square3.getSquareY() + 16) * 32) + (Square3.getSquareX() / 16);

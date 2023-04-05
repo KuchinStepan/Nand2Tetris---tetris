@@ -1,0 +1,30 @@
+class Game{
+    method void Game(){
+        var GameField gameField;
+        var List ourField;
+        var int i;
+        var int j;
+        var Array array;
+        let gameField = GameField.new();
+        let i = 100;
+        while (i > 0) {
+            do RandomizeFigure.MakeFigure(180,16);
+            let array = gameField.getArray12();
+            let j = 10;
+            while (j > 0){
+                if (~((array[j - 1] > 0) | (array[j - 1] = 0))){
+                    do Screen.setColor(false);
+                    do Screen.drawRectangle(100, 0, 259, 223);
+                    do Screen.setColor(true);
+                    do Game();
+                }
+                let j = j - 1;
+            }
+            do gameField.Update();
+            do gameField.Shift();
+            do gameField.PrintField();
+            let i = i - 1;
+        }
+        return;
+    }
+}

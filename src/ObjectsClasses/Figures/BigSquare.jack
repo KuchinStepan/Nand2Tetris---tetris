@@ -62,6 +62,7 @@ class BigSquare{
                 do Sys.wait(speed.getSpeed());
             }
         }
+        do Sys.wait(speed.getSpeed());
         do Sys.wait(50);
         if(Move = false){
             let address3 = 16384 + ((Square3.getSquareY() + 16) * 32) + (Square3.getSquareX() / 16);

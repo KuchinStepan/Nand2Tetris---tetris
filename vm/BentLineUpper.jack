@@ -194,6 +194,7 @@ class BentLineUpper{
                 do Sys.wait(speed.getSpeed());
             }
         }
+        do Sys.wait(speed.getSpeed());
         if (Move = false){
             if (position.GetPosition() = 0){
             let address2 = 16384 + ((Square2.getSquareY() + 16) * 32) + (Square2.getSquareX() / 16);

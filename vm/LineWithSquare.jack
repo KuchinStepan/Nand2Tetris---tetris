@@ -193,6 +193,7 @@ class LineWithSquare{
                 do Sys.wait(speed.getSpeed());
             }
         }
+        do Sys.wait(speed.getSpeed());
         if (Move = false){
             if (position.GetPosition() = 0){
                 let address1 = 16384 + ((Square1.getSquareY() + 16) * 32) + (Square1.getSquareX() / 16);
